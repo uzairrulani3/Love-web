@@ -3,22 +3,39 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<style>
+.cert-box {
+  position: relative;
+}
+.cert-box img { width: 100%; border-radius: 18px; }
 
+.cert-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+
+<body>
 <div class="page">
 
 <h1>Certificate of Awesomeness 🏆</h1>
 
-<div class="certificate">
-  <h2>This certifies that</h2>
-  <p style="font-size:1.3rem; color:#ff2f6d;"><b>Ayesha 💖</b></p>
-  <p>is officially the</p>
-  <p style="font-size:1.25rem;"><b>Best Girlfriend in the World</b></p>
-  <p style="margin-top:14px;">Issued with love ❤️</p>
+<div class="cert-box card">
+  <img src="images/certificate.png">
+  <div class="cert-text">
+    <h2>This certifies that</h2>
+    <p style="font-size:1.3rem;color:#ff2f6d"><b>Ayesha 💖</b></p>
+    <p><b>Best Girlfriend in the World</b></p>
+    <p>Issued with love ❤️</p>
+  </div>
 </div>
 
 </div>
-
 </body>
 </html>
