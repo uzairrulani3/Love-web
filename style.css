@@ -135,3 +135,25 @@ button {
   padding: 4px;
   background: linear-gradient(135deg, #ffd1e8, #fff);
 }
+
+.cert-img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.cert-text {
+  margin-top: -200px;
+  padding: 20px;
+  text-align: center;
+  color: #ff2f6d;
+  font-weight: 600;
+}
+
+.cert-text h2 {
+  font-size: 1.8rem;
+}
+
+.cert-text h3 {
+  font-size: 1.3rem;
+  color: #000;
+}
