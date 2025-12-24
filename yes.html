@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<style>
+.gifts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+.gift {
+  background: white;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+.gift img { width: 100%; }
+</style>
 </head>
+
 <body>
 <div class="page">
 
 <h1>Choose Your Gift 🎁</h1>
 
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px;">
-
-<img src="images/gift.png" onclick="location.href='flower.html'">
-<img src="images/gift.png" onclick="location.href='hug.html'">
-<img src="images/gift.png" onclick="location.href='miss.html'">
-<img src="images/gift.png" onclick="location.href='game.html'">
-
+<div class="gifts">
+  <div class="gift" onclick="location.href='flower.html'"><img src="images/gift.png"></div>
+  <div class="gift" onclick="location.href='hug.html'"><img src="images/gift.png"></div>
+  <div class="gift" onclick="location.href='miss.html'"><img src="images/gift.png"></div>
+  <div class="gift" onclick="location.href='game.html'"><img src="images/gift.png"></div>
 </div>
 
 </div>
