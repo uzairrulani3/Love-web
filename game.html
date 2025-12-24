@@ -1,68 +1,68 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
 <style>
 .board {
-  display:grid;
-  grid-template-columns:repeat(3,80px);
-  gap:10px;
-  justify-content:center;
-  margin:20px auto;
+  display: grid;
+  grid-template-columns: repeat(3,90px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
 }
+
 .cell {
-  width:80px;
-  height:80px;
-  background:#ffe4ec;
-  font-size:40px;
-  border-radius:12px;
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 14px;
+  font-size: 36px;
   display:flex;
   align-items:center;
   justify-content:center;
-  cursor:pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,.15);
 }
+
+.missing {
+  background: #ffe4ef;
+  cursor: pointer;
+}
+
 .hidden { display:none; }
 </style>
 </head>
 <body>
+<div class="page">
 
-<h1>Win My Heart ❤️</h1>
+<h1>Tic Tac Toe ❤️</h1>
 
-<div class="board" id="board"></div>
+<div class="board">
+  <div class="cell">X</div>
+  <div class="cell">X</div>
+  <div class="cell">❤️</div>
 
-<h2 id="msg" class="hidden">Yay! You won my heart 💝</h2>
+  <div class="cell">❤️</div>
+  <div class="cell missing" onclick="win(this)"></div>
+  <div class="cell">X</div>
+
+  <div class="cell">X</div>
+  <div class="cell">❤️</div>
+  <div class="cell">X</div>
+</div>
+
+<h2 id="msg" class="hidden">Yay, you won my heart 💖</h2>
 
 <button id="next" class="hidden" onclick="location.href='certificate.html'">
-Claim Your Certificate 🏆
+Get Your Certificate 🏆
 </button>
 
+</div>
+
 <script>
-let board = Array(9).fill("");
-let heart = "❤️";
-
-const winSets = [
- [0,1,2],[3,4,5],[6,7,8],
- [0,3,6],[1,4,7],[2,5,8],
- [0,4,8],[2,4,6]
-];
-
-const boardDiv = document.getElementById("board");
-
-board.forEach((_,i)=>{
-  const c=document.createElement("div");
-  c.className="cell";
-  c.onclick=()=>play(i,c);
-  boardDiv.appendChild(c);
-});
-
-function play(i,cell){
-  if(board[i]) return;
-  board[i]=heart;
-  cell.innerText=heart;
-  if(winSets.some(set=>set.every(i=>board[i]===heart))){
-    document.getElementById("msg").classList.remove("hidden");
-    document.getElementById("next").classList.remove("hidden");
-  }
+function win(cell){
+  cell.innerHTML = "❤️";
+  document.getElementById("msg").classList.remove("hidden");
+  document.getElementById("next").classList.remove("hidden");
 }
 </script>
 
