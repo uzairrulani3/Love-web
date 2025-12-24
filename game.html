@@ -28,32 +28,46 @@
   cursor: pointer;
 }
 
-.hidden { display:none; }
+.line {
+  width: 0;
+  height: 6px;
+  background: #ff2f6d;
+  border-radius: 6px;
+  margin: 10px auto;
+  transition: .6s;
+}
+.show { width: 200px; }
 </style>
 </head>
+
 <body>
 <div class="page">
 
-<h1>Tic Tac Toe ❤️</h1>
+<h1>Tic Tac Toe 💞</h1>
 
 <div class="board">
-  <div class="cell">X</div>
+  <div class="cell">❤️</div>
   <div class="cell">X</div>
   <div class="cell">❤️</div>
 
-  <div class="cell">❤️</div>
+  <div class="cell">X</div>
   <div class="cell missing" onclick="win(this)"></div>
   <div class="cell">X</div>
 
-  <div class="cell">X</div>
   <div class="cell">❤️</div>
   <div class="cell">X</div>
+  <div class="cell">❤️</div>
 </div>
 
-<h2 id="msg" class="hidden">Yay, you won my heart 💖</h2>
+<div class="line" id="line"></div>
 
-<button id="next" class="hidden" onclick="location.href='certificate.html'">
-Get Your Certificate 🏆
+<p id="msg" style="display:none;">
+You connected my heart…  
+and now it belongs to you 💗
+</p>
+
+<button id="next" style="display:none;" onclick="location.href='certificate.html'">
+See Your Certificate 🏆
 </button>
 
 </div>
@@ -61,8 +75,9 @@ Get Your Certificate 🏆
 <script>
 function win(cell){
   cell.innerHTML = "❤️";
-  document.getElementById("msg").classList.remove("hidden");
-  document.getElementById("next").classList.remove("hidden");
+  document.getElementById("line").classList.add("show");
+  document.getElementById("msg").style.display = "block";
+  document.getElementById("next").style.display = "block";
 }
 </script>
 
