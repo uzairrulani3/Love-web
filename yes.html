@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+
 <style>
 .gifts {
   display: grid;
@@ -26,10 +27,21 @@
 <h1>Choose Your Gift 🎁</h1>
 
 <div class="gifts">
-  <div class="gift" onclick="location.href='flower.html'"><img src="images/gift.png"></div>
-  <div class="gift" onclick="location.href='hug.html'"><img src="images/gift.png"></div>
-  <div class="gift" onclick="location.href='miss.html'"><img src="images/gift.png"></div>
-  <div class="gift" onclick="location.href='game.html'"><img src="images/gift.png"></div>
+  <div class="gift" onclick="parent.document.getElementById('frame').src='flower.html'">
+    <img src="images/gift.png">
+  </div>
+
+  <div class="gift" onclick="parent.document.getElementById('frame').src='hug.html'">
+    <img src="images/gift.png">
+  </div>
+
+  <div class="gift" onclick="parent.document.getElementById('frame').src='miss.html'">
+    <img src="images/gift.png">
+  </div>
+
+  <div class="gift" onclick="parent.document.getElementById('frame').src='game.html'">
+    <img src="images/gift.png">
+  </div>
 </div>
 
 </div>
