@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ayesha 💗</title>
+
+<style>
+body {
+  margin: 0;
+  background: #ffd1e8;
+}
+iframe {
+  border: none;
+  width: 100vw;
+  height: 100vh;
+}
+#startScreen {
+  position: fixed;
+  inset: 0;
+  background: #ffd1e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  z-index: 10;
+}
+</style>
+</head>
+
+<body>
+
+<div id="startScreen">Tap to Begin 💗</div>
+
+<audio id="bgm" loop>
+  <source src="audio/love.mp3" type="audio/mpeg">
+</audio>
+
+<iframe id="frame" src="index.html"></iframe>
+
+<script>
+const music = document.getElementById("bgm");
+const start = document.getElementById("startScreen");
+
+start.addEventListener("click", () => {
+  music.play();
+  start.style.display = "none";
+});
+</script>
+
+</body>
+</html>
