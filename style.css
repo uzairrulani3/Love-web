@@ -142,18 +142,19 @@ button {
 }
 
 .cert-text {
-  margin-top: -200px;
-  padding: 20px;
+  position: relative;
+  margin-top: -55%;
+  padding: 18px;
   text-align: center;
   color: #ff2f6d;
   font-weight: 600;
 }
 
 .cert-text h2 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
 .cert-text h3 {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   color: #000;
 }
