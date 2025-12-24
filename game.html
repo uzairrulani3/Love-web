@@ -1,46 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-.board {
-  display: grid;
-  grid-template-columns: repeat(3,90px);
-  gap: 10px;
-  justify-content: center;
-  margin: 20px auto;
+body{
+  margin:0;
+  min-height:100vh;
+  background: linear-gradient(180deg,#ffd1e3,#fff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.cell {
-  width: 90px;
-  height: 90px;
-  background: white;
-  border-radius: 14px;
-  font-size: 36px;
+.page{
+  text-align:center;
+  width:100%;
+  max-width:360px;
+  padding:20px;
+}
+
+h1{
+  color:#ff2f6d;
+  margin-bottom:15px;
+}
+
+.board{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+  margin:20px auto;
+}
+
+.cell{
+  aspect-ratio:1;
+  background:white;
+  border-radius:18px;
+  font-size:2rem;
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow: 0 6px 12px rgba(0,0,0,.15);
+  box-shadow:0 8px 18px rgba(0,0,0,.18);
 }
 
-.missing {
-  background: #ffe4ef;
-  cursor: pointer;
+.missing{
+  background:#ffe4ef;
+  cursor:pointer;
 }
 
-.line {
-  width: 0;
-  height: 6px;
-  background: #ff2f6d;
-  border-radius: 6px;
-  margin: 10px auto;
-  transition: .6s;
+.line{
+  width:0;
+  height:8px;
+  background:linear-gradient(90deg,#ff2f6d,#ff7aa5);
+  border-radius:999px;
+  margin:18px auto;
+  transition:.7s ease;
 }
-.show { width: 200px; }
+.show{ width:80%; }
+
+#msg{
+  display:none;
+  font-size:1.1rem;
+  line-height:1.5;
+  margin:12px 0;
+}
+
+button{
+  display:none;
+  background:#ff2f6d;
+  border:none;
+  padding:12px 22px;
+  border-radius:999px;
+  color:white;
+  font-size:1rem;
+  margin-top:10px;
+  box-shadow:0 6px 12px rgba(0,0,0,.2);
+}
 </style>
 </head>
 
 <body>
+
 <div class="page">
 
 <h1>Tic Tac Toe 💞</h1>
@@ -61,12 +102,14 @@
 
 <div class="line" id="line"></div>
 
-<p id="msg" style="display:none;">
-You connected my heart…  
-and now it belongs to you 💗
+<p id="msg">
+You completed the only piece that was missing…  
+and now my heart finally feels whole.  
+<br><br>
+It’s yours 💗
 </p>
 
-<button id="next" style="display:none;" onclick="location.href='certificate.html'">
+<button id="next" onclick="location.href='certificate.html'">
 See Your Certificate 🏆
 </button>
 
@@ -74,10 +117,13 @@ See Your Certificate 🏆
 
 <script>
 function win(cell){
-  cell.innerHTML = "❤️";
+  cell.innerHTML="❤️";
+  cell.style.transform="scale(1.2)";
+  setTimeout(()=>cell.style.transform="scale(1)",200);
+
   document.getElementById("line").classList.add("show");
-  document.getElementById("msg").style.display = "block";
-  document.getElementById("next").style.display = "block";
+  document.getElementById("msg").style.display="block";
+  document.getElementById("next").style.display="inline-block";
 }
 </script>
 
