@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<style>
+.board {
+  display:grid;
+  grid-template-columns:repeat(3,80px);
+  gap:10px;
+  justify-content:center;
+  margin:20px auto;
+}
+.cell {
+  width:80px;
+  height:80px;
+  background:#ffe4ec;
+  font-size:40px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.hidden { display:none; }
+</style>
+</head>
+<body>
+
+<h1>Win My Heart ❤️</h1>
+
+<div class="board" id="board"></div>
+
+<h2 id="msg" class="hidden">Yay! You won my heart 💝</h2>
+
+<button id="next" class="hidden" onclick="location.href='certificate.html'">
+Claim Your Certificate 🏆
+</button>
+
+<script>
+let board = Array(9).fill("");
+let heart = "❤️";
+
+const winSets = [
+ [0,1,2],[3,4,5],[6,7,8],
+ [0,3,6],[1,4,7],[2,5,8],
+ [0,4,8],[2,4,6]
+];
+
+const boardDiv = document.getElementById("board");
+
+board.forEach((_,i)=>{
+  const c=document.createElement("div");
+  c.className="cell";
+  c.onclick=()=>play(i,c);
+  boardDiv.appendChild(c);
+});
+
+function play(i,cell){
+  if(board[i]) return;
+  board[i]=heart;
+  cell.innerText=heart;
+  if(winSets.some(set=>set.every(i=>board[i]===heart))){
+    document.getElementById("msg").classList.remove("hidden");
+    document.getElementById("next").classList.remove("hidden");
+  }
+}
+</script>
+
+</body>
+</html>
