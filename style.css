@@ -1,4 +1,4 @@
-* {
+ {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -136,25 +136,37 @@ button {
   background: linear-gradient(135deg, #ffd1e8, #fff);
 }
 
+.certificate {
+  position: relative;
+}
+
 .cert-img {
   width: 100%;
   border-radius: 16px;
 }
 
+/* Text overlay inside certificate */
 .cert-text {
-  position: relative;
-  margin-top: -55%;
-  padding: 18px;
+  position: absolute;
+  top: 28%;
+  left: 10%;
+  width: 80%;
   text-align: center;
-  color: #ff2f6d;
+  color: #000;
   font-weight: 600;
 }
 
+.cert-text p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
 .cert-text h2 {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
+  margin: 8px 0;
 }
 
 .cert-text h3 {
-  font-size: 1.35rem;
-  color: #000;
+  font-size: 1.3rem;
+  margin: 8px 0;
 }
