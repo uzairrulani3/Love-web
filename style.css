@@ -116,3 +116,22 @@ button {
   font-size: 1.15rem;
   margin-top: 10px;
 }
+
+/* Miss You photo frame */
+.photo-strip {
+  background: #fff;
+  border-radius: 24px;
+  padding: 16px;
+  box-shadow: 0 14px 28px rgba(0,0,0,.15);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.photo-strip img {
+  width: 30%;
+  border-radius: 18px;
+  border: 3px solid #ff8fb5;
+  padding: 4px;
+  background: linear-gradient(135deg, #ffd1e8, #fff);
+}
