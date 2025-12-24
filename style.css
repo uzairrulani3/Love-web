@@ -2,52 +2,90 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", sans-serif;
 }
 
 body {
   min-height: 100vh;
-  background: linear-gradient(180deg, #ffe1ec, #e8f0ff);
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #ffd1e8, #fff);
+  display: flex;
+  justify-content: center;
 }
 
 .page {
-  min-height: 100vh;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  max-width: 420px;
+  padding: 24px 18px 40px;
   text-align: center;
 }
 
+/* Headings */
 h1 {
-  color: #ff3f7f;
-  font-size: 1.9rem;
+  font-size: 2.1rem;
+  color: #ff2f6d;
   margin-bottom: 12px;
 }
 
-p {
-  color: #444;
+h2 {
+  font-size: 1.6rem;
+  color: #ff4f8b;
+  margin-bottom: 10px;
+}
+
+/* Romantic text */
+.romantic {
   font-size: 1.05rem;
-  margin-bottom: 18px;
+  color: #ff4f8b;
+  line-height: 1.6;
+  margin-top: 12px;
 }
 
-img, video {
-  max-width: 85%;
+/* Card container */
+.card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.15);
+  margin: 14px auto;
+}
+
+/* Images */
+img {
+  width: 100%;
+  max-width: 260px;
   height: auto;
-  margin: 16px 0;
-  border-radius: 14px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  display: block;
+  margin: 0 auto;
 }
 
+/* Buttons */
 button {
-  background: linear-gradient(135deg, #ff5f8f, #ff2f6f);
-  color: white;
+  margin-top: 18px;
+  padding: 12px 26px;
   border: none;
   border-radius: 999px;
-  padding: 14px 26px;
+  background: linear-gradient(90deg, #ff2f6d, #ff6fa3);
+  color: white;
   font-size: 1rem;
-  margin: 8px;
-  cursor: pointer;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+}
+
+/* Certificate */
+.certificate {
+  background: #fff;
+  border-radius: 20px;
+  padding: 22px 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.2);
+  border: 3px solid #ff7aa5;
+  margin-top: 18px;
+}
+
+.certificate h2 {
+  font-size: 1.8rem;
+  color: #ff2f6d;
+}
+
+.certificate p {
+  font-size: 1.05rem;
+  margin-top: 8px;
 }
