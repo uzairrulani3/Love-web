@@ -12,11 +12,11 @@ body {
   justify-content: center;
 }
 
-/* Main page container */
+/* Main Page Container */
 .page {
   width: 100%;
   min-height: 100vh;
-  padding: 24px 18px 60px;
+  padding: 22px 16px 60px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ h2 {
   margin-bottom: 12px;
 }
 
-/* Romantic text */
+/* Romantic Text */
 .romantic {
   font-size: 1.1rem;
   color: #ff4f8b;
@@ -44,7 +44,7 @@ h2 {
   margin-top: 12px;
 }
 
-/* Cards */
+/* Card */
 .card {
   background: #fff;
   border-radius: 22px;
@@ -76,7 +76,7 @@ button {
   box-shadow: 0 8px 18px rgba(0,0,0,.25);
 }
 
-/* Gift grid */
+/* Gift Grid */
 .gift-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -95,37 +95,17 @@ button {
   transform: scale(0.92);
 }
 
-/* Certificate */
-.certificate {
-  background: #fff;
-  border-radius: 20px;
-  padding: 24px 18px;
-  box-shadow: 0 16px 38px rgba(0,0,0,.2);
-  border: 3px solid #ff7aa5;
-  margin-top: 18px;
-  width: 92%;
-  max-width: 380px;
-}
-
-.certificate h2 {
-  font-size: 2.1rem;
-  color: #ff2f6d;
-}
-
-.certificate p {
-  font-size: 1.15rem;
-  margin-top: 10px;
-}
-
-/* Miss You photo frame */
+/* Miss You Photo Frame */
 .photo-strip {
   background: #fff;
   border-radius: 24px;
-  padding: 16px;
+  padding: 14px;
   box-shadow: 0 14px 28px rgba(0,0,0,.15);
   display: flex;
   gap: 12px;
   justify-content: center;
+  width: 92%;
+  max-width: 380px;
 }
 
 .photo-strip img {
@@ -136,37 +116,48 @@ button {
   background: linear-gradient(135deg, #ffd1e8, #fff);
 }
 
+/* Certificate Container */
 .certificate {
   position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 16px 38px rgba(0,0,0,.2);
+  border: 3px solid #ff7aa5;
+  margin-top: 18px;
+  width: 92%;
+  max-width: 380px;
 }
 
+/* Certificate Image */
 .cert-img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 14px;
 }
 
-/* Text overlay inside certificate */
+/* Text Overlay on Certificate */
 .cert-text {
   position: absolute;
-  top: 28%;
-  left: 10%;
-  width: 80%;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72%;
   text-align: center;
   color: #000;
   font-weight: 600;
 }
 
-.cert-text p {
-  margin: 6px 0;
-  font-size: 1rem;
-}
-
 .cert-text h2 {
-  font-size: 1.8rem;
-  margin: 8px 0;
+  font-size: 1.55rem;
+  margin: 6px 0;
 }
 
 .cert-text h3 {
-  font-size: 1.3rem;
-  margin: 8px 0;
+  font-size: 1.2rem;
+  margin: 6px 0;
+}
+
+.cert-text p {
+  font-size: 1rem;
+  margin: 6px 0;
 }
