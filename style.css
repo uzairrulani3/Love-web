@@ -1,22 +1,67 @@
-body {
-  background: #fff0f6;
-  font-family: 'Segoe UI', sans-serif;
-  text-align: center;
-  padding: 20px;
-  margin: 0;
+* {
+  box-sizing: border-box;
 }
 
-h1 { font-size: 36px; }
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg,#ffd6e8,#fff0f6,#e0f7ff);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  width: 100%;
+  max-width: 420px;
+  padding: 24px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  color: #ff2f6d;
+  margin-bottom: 14px;
+}
+
+p {
+  font-size: 16px;
+  color: #444;
+}
 
 button {
-  padding: 12px 26px;
-  border-radius: 30px;
+  padding: 12px 22px;
+  border-radius: 999px;
   border: none;
-  background: #ff5c8a;
+  background: linear-gradient(135deg,#ff5c8a,#ff2f6d);
   color: white;
-  font-size: 18px;
-  margin: 10px;
+  font-size: 16px;
+  margin: 8px;
   cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0,0,0,.15);
 }
 
-img { max-width: 260px; }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.gifts {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.gift {
+  background: white;
+  border-radius: 18px;
+  padding: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,.12);
+  cursor: pointer;
+  transition: transform .15s;
+}
+
+.gift:active { transform: scale(.96); }
