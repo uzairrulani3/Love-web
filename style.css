@@ -6,53 +6,59 @@
 
 body {
   min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: linear-gradient(180deg, #ffd1e8, #fff);
   display: flex;
   justify-content: center;
 }
 
+/* Main page container */
 .page {
   width: 100%;
-  max-width: 420px;
-  padding: 24px 18px 40px;
+  min-height: 100vh;
+  padding: 24px 18px 60px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Headings */
 h1 {
-  font-size: 2.1rem;
+  font-size: 2.3rem;
   color: #ff2f6d;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   color: #ff4f8b;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 /* Romantic text */
 .romantic {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: #ff4f8b;
   line-height: 1.6;
   margin-top: 12px;
 }
 
-/* Card container */
+/* Cards */
 .card {
   background: #fff;
   border-radius: 22px;
-  padding: 16px;
-  box-shadow: 0 12px 28px rgba(0,0,0,.15);
-  margin: 14px auto;
+  padding: 18px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.15);
+  margin: 18px auto;
+  width: 92%;
+  max-width: 380px;
 }
 
 /* Images */
 img {
-  width: 100%;
-  max-width: 260px;
+  width: 85%;
+  max-width: 360px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -61,31 +67,52 @@ img {
 /* Buttons */
 button {
   margin-top: 18px;
-  padding: 12px 26px;
+  padding: 14px 28px;
   border: none;
   border-radius: 999px;
   background: linear-gradient(90deg, #ff2f6d, #ff6fa3);
   color: white;
-  font-size: 1rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  font-size: 1.05rem;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+/* Gift grid */
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.gift-grid img {
+  width: 140px;
+  max-width: 42vw;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.gift-grid img:active {
+  transform: scale(0.92);
 }
 
 /* Certificate */
 .certificate {
   background: #fff;
   border-radius: 20px;
-  padding: 22px 18px;
-  box-shadow: 0 15px 35px rgba(0,0,0,.2);
+  padding: 24px 18px;
+  box-shadow: 0 16px 38px rgba(0,0,0,.2);
   border: 3px solid #ff7aa5;
   margin-top: 18px;
+  width: 92%;
+  max-width: 380px;
 }
 
 .certificate h2 {
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   color: #ff2f6d;
 }
 
 .certificate p {
-  font-size: 1.05rem;
-  margin-top: 8px;
+  font-size: 1.15rem;
+  margin-top: 10px;
 }
