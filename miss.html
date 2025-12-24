@@ -3,15 +3,25 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
+<style>
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.photos img { width:100%; border-radius:12px; }
+</style>
 </head>
-<body>
 
+<body>
 <div class="page">
 
 <h1>I Miss You 😢</h1>
 
-<div class="card">
-  <img src="images/cat_cry.png">
+<div class="card photos">
+  <img src="images/photo1.jpg">
+  <img src="images/photo2.jpg">
+  <img src="images/photo3.jpg">
 </div>
 
 <p class="romantic">
@@ -21,6 +31,5 @@ Because my favorite part is missing.
 </p>
 
 </div>
-
 </body>
 </html>
